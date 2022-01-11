@@ -1,14 +1,20 @@
 import os
-import sys
+import platform
 import time
-from time import sleep
+
 from year import logos
 from year import colors
+from year import sprint
+sp = sprint
 c = colors
 l = logos
 
 def clear():
-    os.system("clear")
+    s = platform.platform()
+    if "Windows" in s:
+        os.system("cls")
+    else:
+        os.system("clear")
 
 def mysleep():
     time.sleep(0.5)
@@ -38,64 +44,73 @@ def main():
     print(c.lg+ l.wish)
     mysleep()
     clear()
+    
+    sp.sprint(l.year)
 
-    for line in c.c + l.year:
-        for i in line:
-            print(i, end='')
-            sys.stdout.flush()
-            sleep(0.01)
-            break
     clear()
     print(c.c + l.hap)
+    print(c.lr + l.name)
     mysleep()
     clear()
     print(c.y + l.wish)
+    print(c.lr + l.name)
     mysleep()
     clear()
     print(c.c + l.hap)
+    print(c.lr + l.name)
     mysleep()
     clear()
     print(c.lr + l.yearptext)
     mysleep()
     clear()
     print(c.lg + l.yearptext)
+    print(c.lr + l.name)
     mysleep()
     clear()
     print(c.lc + l.yearptext)
+    print(c.lc + l.name)
     mysleep()
     clear()
     print(c.ly + l.yearptext)
+    print(c.c + l.name)
     mysleep()
     clear()
     print(c.c + l.yearptext)
+    print(c.y + l.name)
     mysleep()
     clear()
     print(c.r + l.yearptext)
+    print(c.r + l.name)
     mysleep()
     clear()
     print(c.g + l.yearptext)
+    print(c.ly + l.name)
     mysleep()
     clear()
+    print(c.c + l.year)
+    print(c.lg + l.wish)
+    print(c.r + l.name)
+    mysleep()
+    clear()
+    print(c.c + l.year)
+    print(c.lg + l.wish)
     print(c.lr + l.name)
-    print(c.c + l.year)
-    print(c.lg + l.wish)
-    mysleep()
-    clear()
-    print(c.c + l.year)
-    print(c.lg + l.wish)
     mysleep()
     clear()
     print(c.lr + l.year)
     print(c.g + l.wish)
+    print(c.ly + l.name)
     mysleep()
     clear()
     print(c.lc + l.year)
     print(c.ly + l.wish)
-    print(c.lr + l.name)
+    print(c.lg + l.name)
+    
     mysleep()
     clear()
     print(c.g+ l.name)
     print(c.y + l.wish)
+    print(c.lr + l.name)
     mysleep()
     clear()
     print(c.c + l.year +"\n" + l.c)
@@ -105,30 +120,45 @@ def main():
     mysleep()
     clear()
     print(c.g + l.year+"\n" + l.c)
+    print(c.lr + l.name)
+
     mysleep()
     clear()
 
     print(c.lr + l.yearptext)
+    print(c.lr + l.name)
+
     mysleep()
     clear()
     print(c.lg + l.yearptext)
+    print(c.lg + l.name)
+
     mysleep()
     clear()
     print(c.lc + l.yearptext)
+    print(c.lc + l.name)
+
     mysleep()
     clear()
     print(c.ly + l.yearptext)
+    print(c.ly + l.name)
+
     mysleep()
     clear()
     print(c.c + l.yearptext)
+    print(c.c + l.name)
+
     mysleep()
     clear()
     print(c.r + l.yearptext)
+    print(c.r + l.name)
+
     mysleep()
     clear()
     print(c.g + l.yearptext)
+    print(c.g + l.name)
+
     mysleep()
-    clear()
 
 if __name__ == "__main__":
     main()
